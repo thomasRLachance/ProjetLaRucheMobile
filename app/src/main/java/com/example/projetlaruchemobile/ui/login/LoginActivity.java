@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.projetlaruchemobile.R;
+import com.example.projetlaruchemobile.SalesActivity;
 import com.example.projetlaruchemobile.ui.login.LoginViewModel;
 import com.example.projetlaruchemobile.ui.login.LoginViewModelFactory;
 import com.example.projetlaruchemobile.databinding.ActivityLoginBinding;
@@ -74,7 +76,9 @@ public class LoginActivity extends AppCompatActivity {
             setResult(Activity.RESULT_OK);
 
             //Complete and destroy login activity once successful
-            finish();
+            //finish();
+            Intent myIntent = new Intent(LoginActivity.this, SalesActivity.class);
+            LoginActivity.this.startActivity(myIntent);
         });
 
         TextWatcher afterTextChangedListener = new TextWatcher() {

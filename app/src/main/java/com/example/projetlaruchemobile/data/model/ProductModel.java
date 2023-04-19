@@ -5,11 +5,13 @@ public class ProductModel {
     int id;
     String name;
     double price;
+    int quantity;
 
     public ProductModel(int id, String name, double price) {
         this.id = id;
         this.name = name;
         this.price = price;
+        this.quantity = 0;
     }
 
     public int getId() {
@@ -35,4 +37,17 @@ public class ProductModel {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void incrementQuantity() {
+        this.quantity++;
+    }
+
+    public void reduceQuantity() {
+        this.quantity--;
+    }
+
 }

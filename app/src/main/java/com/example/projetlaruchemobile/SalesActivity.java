@@ -29,10 +29,19 @@ public class SalesActivity extends AppCompatActivity {
 
         productModels = new ArrayList<>();
 
-        productModels.add(new ProductModel(0, "item0", 1.2));
-        productModels.add(new ProductModel(1, "item1", 2.1));
-        productModels.add(new ProductModel(2, "item2", 0.7));
-        productModels.add(new ProductModel(3, "item3", 1.4));
+        productModels.add(new ProductModel(0, "Repas Chaud", 2.0));
+        productModels.add(new ProductModel(1, "Sub'Vanier", 2.0));
+        productModels.add(new ProductModel(2, "Jus de fruits", 0.5));
+        productModels.add(new ProductModel(3, "Smoothie", 0.0));
+        productModels.add(new ProductModel(4, "Gatorade", 1.0));
+        productModels.add(new ProductModel(5, "Collation", 1.0));
+        productModels.add(new ProductModel(6, "Fruit", 0.5));
+        productModels.add(new ProductModel(7, "Lait au chocolat", 1.0));
+        productModels.add(new ProductModel(8, "Jus de légumes", 0.5));
+        productModels.add(new ProductModel(9, "Salade", 1.0));
+        productModels.add(new ProductModel(10, "Yop", 1.0));
+        productModels.add(new ProductModel(11, "Thé glacé", 1.0));
+        productModels.add(new ProductModel(12, "Soupe", 0.0));
 
         adapter = new ProductAdapter(productModels, getApplicationContext(), this);
 

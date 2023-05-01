@@ -1,21 +1,25 @@
 package com.example.projetlaruchemobile;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projetlaruchemobile.data.model.ProductModel;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class SalesActivity extends AppCompatActivity {
 
     private ArrayList<ProductModel> productModels;
     private ListView productListView;
     private TextView totalTextView;
+    private TextView lastSavedTimeTextView;
+    private Button saveButton;
 
     private static ProductAdapter adapter;
 
@@ -24,8 +28,20 @@ public class SalesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sales);
 
-        productListView = (ListView) findViewById(R.id.productListView);
+        productListView = findViewById(R.id.productListView);
         totalTextView = findViewById(R.id.totalTextView);
+        lastSavedTimeTextView = findViewById(R.id.lastSavedTimeTextView);
+        saveButton = findViewById(R.id.saveButton);
+
+        saveButton.setOnClickListener(v -> {
+            Calendar calendar = Calendar.getInstance();
+            int hour = calendar.get(Calendar.HOUR_OF_DAY);
+            int minute = calendar.get(Calendar.MINUTE);
+
+            String timeString = String.format("%02d:%02d", hour, minute);
+
+            lastSavedTimeTextView.setText(timeString);
+        });
 
         productModels = new ArrayList<>();
 

@@ -10,7 +10,7 @@
         android:id="@+id/lastSaveTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:text="Dernière sauvegarde:"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +30,12 @@
         android:id="@+id/lastSavedTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="30 mins"
+        android:layout_marginStart="8dp"
+        android:text="nulle"
         app:layout_constraintBottom_toBottomOf="@+id/lastSaveTextView"
-        app:layout_constraintEnd_toStartOf="@+id/saveButton"
         app:layout_constraintStart_toEndOf="@+id/lastSaveTextView"
-        app:layout_constraintTop_toTopOf="@+id/lastSaveTextView" />
+        app:layout_constraintTop_toTopOf="@+id/lastSaveTextView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/productListView"

@@ -50,4 +50,13 @@ public class ProductModel {
         this.quantity--;
     }
 
+    @Override
+    public String toString() {
+        return "ProductModel{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }
